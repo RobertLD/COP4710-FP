@@ -15,7 +15,7 @@ use COP4710_FP;
 
 # The following statements construct our entity tablesbook
 create table user (
-    user_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL AUTO_INCREMENT,
 	username VARCHAR(45) NOT NULL,
     password_hash VARCHAR(128),
     tmp_password BOOLEAN,
@@ -63,7 +63,7 @@ create table book (
 #create table maintain ( );
 
 create table request(
-	request_id INTEGER NOT NULL,
+	request_id INTEGER NOT NULL AUTO_INCREMENT,
     user_id INTEGER NOT NULL REFERENCES professor(user_id),
     book_ISBN VARCHAR(256) NOT NULL REFERENCES book(ISBN),
     primary key(request_id)
