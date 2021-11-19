@@ -15,7 +15,7 @@ use COP4710_FP;
 
 # The following statements construct our entity tablesbook
 create table user (
-    user_id INTEGER NOT NULL AUTO_INCREMENT,
+    user_id INTEGER NOT NULL AUTO_INCREMENT UNIQUE,
 	username VARCHAR(45) NOT NULL,
     password_hash VARCHAR(128),
     tmp_password BOOLEAN,
@@ -31,7 +31,7 @@ create table role (
 
 create table staff(
 	user_id INTEGER NOT NULL REFERENCES user(user_id),
-    username VARCHAR(45) NOT NULL REFERENCES user(username),
+    #username VARCHAR(45) NOT NULL REFERENCES user(username),
     superadmin BOOLEAN,
     primary key (user_id)
 
