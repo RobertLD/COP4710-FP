@@ -1,0 +1,37 @@
+<!-- 
+    Will contain:
+    - User/password field
+    - Submit button
+    - Create account link (this will only create Professor accounts!)
+    - Forgot password link
+    - onLoad checks if the user is already logged in or not by checking cookies. If they are, auto-route accordingly.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCF Book Request - Login</title>
+    <!-- JS imports-->
+</head>
+
+<body>
+    <div class="login">
+        <div class="loginDiv">
+            <form onsubmit="" class="loginForm">
+                <input type="text" placeholder="Username"></input></br>
+                <input type="text" placeholder="Password"></input></br>
+                <input type="submit" value="Login"></input></br>
+            </form>
+        </div>
+        <div class="routeDiv">
+            <a class="createAccountLink">Create New Account</a>
+            <a class="forgotPasswordLink">Forgot Password?</a>
+        </div>
+        <span class="loginError"></span>
+    </div>
+</body>
+
+</html>

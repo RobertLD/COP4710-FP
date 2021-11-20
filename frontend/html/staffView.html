@@ -1,0 +1,64 @@
+<!-- 
+    Will contain:
+    - Get All Book requests for a given semester (generate list of all book requests)
+        - Generate the list for the upcoming semester for submission (Submit appears only for this)
+    - Make/Delete new admin accounts (will generate new temp password on creation)
+    - Schedule email for book request due date. Global broadcast.
+        - Form will ask for due date, date to send email, time to send email
+        - Decision to be made on how to handle to send instant global broadcasts. 
+    - Broadcast email for a Book request from an individual professor
+    Notes: 
+        The plan is to make this an admin hub page where everything can be done on the same page.
+        Think like how the opening page of my.ucf.edu shows up in a block format or like the Xbox homescreen
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCF Book Request - Staff</title>
+</head>
+<body>
+    <div class="staffViewContainer">
+        <h1>Staff Hub</h1>
+        <div class="getAll">
+            <input type="button" value="Get All Book Requests">
+            <p id="viewResults">Full Book Requests test value</p>
+            <input type="button" value="Submit Requests For Upcoming Semester"><br>
+            <span class="getAllError">Response</span>
+        </div>
+        <div class="makeOrDeleteAdmin">
+            <input type="text" placeholder="Username"><br>
+            <input type="text" placeholder="Email"><br>
+            <input type="button" value="Create Staff Account"><br>
+            <input type="button" value="Delete Staff Account"><br>
+            <span class="makeOrDeleteAdminError">Response</span>
+        </div>
+        <div class="scheduleEmail">
+            <form onsubmit="">
+                <input type="text" placeholder="Due Date"><br>
+                <label>Please specify when this Email is to be sent below. 
+                    If blank, it will send immediately
+                </label><br>
+                <input type="text" placeholder="Date"><br>
+                <input type="text" placeholder="Time"><br>
+            </form>
+            <span class="scheduleEmailError">Response</span>
+        </div>
+        <div class="individualEmail">
+            <form onsubmit="">
+                <input type="text" placeholder="Due Date"><br>
+                <input type="text" placeholder="Email Individual"><br>
+                <label>Please specify when this Email is to be sent below. 
+                    If blank, it will send immediately
+                </label><br>
+                <input type="text" placeholder="Date"><br>
+                <input type="text" placeholder="Time"><br>
+            </form>
+            <span class="individualEmailError">Response</span>
+        </div>
+        <input type="button" value="Logout">
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- 
+    Will contain:
+    - Select semester drop down input
+    - Form contains: (1) book title, (2) author names, (3) edition, (4) publisher, (5) ISBN.
+    - Submit form button.
+        - Warning will appear first saying it will overide a previous request if it exists for the given semester
+        - Upon confirmation it will process the POST/PUT on the database for the professor for the given semester
+    Notes: 
+        All the CRUD pages should be able to navigate back to this hub
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCF Book Request - Create a Request</title>
+    <!-- JS imports-->
+</head>
+
+<body>
+    <div class="bookRequest">
+        <div class="bookRequestDiv">
+            <h1>Create a Book Request</h1>
+            <form onsubmit="" class="bookRequestForm">
+                Select Semester:<select>
+                    <option>Semesters</option>
+                </select>
+                </br>
+                <input type="" placeholder="Book Title"></input></br>
+                <input type="text" placeholder="Author Name"></input></br>
+                <input type="text" placeholder="Edition"></input></br>
+                <input type="text" placeholder="Publisher"></input></br>
+                <input type="text" placeholder="ISBN"></input></br>
+            </form>
+        </div>
+        <span class="bookRequestError"></span>
+    </div>
+</body>
+
+</html>

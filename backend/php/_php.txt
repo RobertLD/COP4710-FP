@@ -1,0 +1,1 @@
+Put all PHP in this folder. This file exists to populate the directory.
