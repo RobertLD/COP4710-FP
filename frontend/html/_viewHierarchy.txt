@@ -1,0 +1,33 @@
+View heirarchy works as follows:
+-----------------------------------
+* Parents can go to children. 
+* Children can go to parents.
+* Siblings cannot go to each other. 
+* All children of the Super Parent can go directly back to the Super Parent but not the other way around.
+
+Examples:
+-----------------------------------
+* login can go to staffView.
+* staffView can go to login. 
+* StaffView cannot go to professorView. 
+* editRequestForm can go directly to login but login cannot go directly to editRequestForm.
+
+Visual:
+-----------------------------------
+
+login.html
+|
+----forgotPassword.html
+|
+----register.html
+|
+----newPassword.html
+|
+----stafView.html
+|
+----professorView.html
+    |
+    ----createRequestForm.html
+    |
+    ----editRequestForm.html
+
