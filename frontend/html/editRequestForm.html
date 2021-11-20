@@ -1,0 +1,48 @@
+<!-- 
+    Will contain:
+    - Select semester drop down input. This will change the data in the form
+    - Form contains: (1) book title, (2) author names, (3) edition, (4) publisher, (5) ISBN.
+    - Info will autopopulate with the results of the GET request for that Professor and Semester
+    - Update button
+        - confirmation of the update will be shown upon completion of PUT request
+    - Delete button
+        - Warning that you are about to delete
+        - Confirmation of deletion after (form should be empty)
+    Notes: 
+        All the CRUD pages should be able to navigate back to this hub
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCF Book Request - View/Edit a Request</title>
+    <!-- JS imports-->
+</head>
+
+<body>
+    <div class="bookRequest">
+        <div class="bookRequestDiv">
+            <h1>Create a Book Request</h1><br>
+                Select Semester:<select>
+                    <option>Semesters</option>
+                </select>
+                </br>
+                <p id="BookTitle">Book Title</p></br>
+                <p id="AuthorName">Authot Name</p></br>
+                <p id="Edition">Edition</p></br>
+                <p id="Publisher">Publisher</p></br>
+                <p id="ISBN">ISBN</p></br>
+        </div>
+        <div>
+            <input type="button" value="Update Request">
+            <input type="button" value="Delete Request">
+        </div>
+        <span class="bookRequestError"></span>
+    </div>
+</body>
+
+</html>
