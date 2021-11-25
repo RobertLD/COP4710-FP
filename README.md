@@ -1,5 +1,18 @@
 # COP4710-FP
 
+## Overview of tools
+We are going to need a few tools to develop our project to completion, namely the invidiual components of the LAMP stack
+1. Linux (Ubuntu via WSL)
+2. Apache2 (Server)
+3. MYSQL (SQL Server)
+4. PHP (Middleware)
+
+These tools will interface with one another to give the illusion of a seamless application. Generally this works as such:
+Linux - Largely irrelevant in the physical aspect of the project, allows apache to make SystemCalls and more.
+Apache2 - Allows access to files over different internet protocols
+MYSQL - Provides database access and the query language to access them
+PHP - Interface with API, MYSQL, and front-end information
+
 
 ## Setting up your development enviroment
 
@@ -47,3 +60,8 @@ You can install all of the PHP tools with one command, this command being:
 ```
 sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
 ```
+## Configuration Required
+1. MYSQL database must be configured with a root user, and you may (and probably should) add a personal user so not every use-case uses the Root user
+2. The MYSQL database can me configured by running the create_schema.sql script
+3. APACHE may require configuration to use PHP, but generally the PHP installation takes care of this for you.
+4. Linux may require some minor permission management and service management to get everything running as intended
