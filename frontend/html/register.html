@@ -18,17 +18,18 @@
 </head>
 
 <body>
+	<a href="index.php">Home</a><br/>
     <div class="register">
         <div class="registerDiv">
-            <form onsubmit="" class="registerForm">
+            <form class="registerForm" action="../../backend/php/signup.a.php" method="post">
                 <label>Register Below</label></br></br>
-                <input type="text" placeholder="Email"></input></br>
-                <input type="text" placeholder="Username"></input></br>
-                <input type="text" placeholder="Password"></input></br>
-                <input type="text" placeholder="Confirm Password"></input></br>
-                <input type="text" placeholder="First Name"></input></br>
-                <input type="text" placeholder="Last Name"></input></br>
-                <input type="submit" value="Register"></input></br>
+                <input type="text" name="email" placeholder="Email"></input></br>
+                <input type="text" name="uid" placeholder="Username"></input></br>
+                <input type="text" name="pwd" placeholder="Password"></input></br>
+                <input type="text" name="pwdr" placeholder="Confirm Password"></input></br>
+                <input type="text" name="fn" placeholder="First Name"></input></br>
+                <input type="text" name="ln" placeholder="Last Name"></input></br>
+                <input type="submit" name="submit" value="Register"></input></br>
             </form>
         </div>
         <span class="registerError"></span>

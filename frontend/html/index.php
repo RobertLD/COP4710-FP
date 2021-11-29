@@ -6,6 +6,11 @@
     - Forgot password link
     - onLoad checks if the user is already logged in or not by checking cookies. If they are, auto-route accordingly.
 -->
+<?php
+	# If the user is already logged in, this redirects them to the correct view
+	include_once '../../backend/php/redirect.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,15 +25,15 @@
 <body>
     <div class="login">
         <div class="loginDiv">
-            <form onsubmit="" class="loginForm">
-                <input type="text" placeholder="Username"></input></br>
-                <input type="text" placeholder="Password"></input></br>
-                <input type="submit" value="Login"></input></br>
+            <form class="loginForm" action="../../backend/php/login.a.php" method="post">
+                <input type="text" name="uid" placeholder="Username"></input></br>
+                <input type="text" name="pwd" placeholder="Password"></input></br>
+                <input type="submit" name="submit" value="Login"></input></br>
             </form>
         </div>
         <div class="routeDiv">
-            <a class="createAccountLink">Create New Account</a>
-            <a class="forgotPasswordLink">Forgot Password?</a>
+            <a class="createAccountLink" href="register.html">Create New Account</a><br/>
+            <a class="forgotPasswordLink" href="forgotPassword.html">Forgot Password?</a>
         </div>
         <span class="loginError"></span>
     </div>

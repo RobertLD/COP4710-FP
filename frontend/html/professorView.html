@@ -17,10 +17,14 @@
 
 <body>
     <div>
-        <input type="button" value="Create Book Request"></br>
-        <input type="button" value="View/Update/Delete Book Request"></br>
+        <a href="createRequestForm.html">Create Book Request</a></br>
+        <a href="editRequestForm.html">View/Update/Delete Book Request</a></br>
         </br>
-        <input type="button" value="Logout">
+		<form class="logoutForm" action="../../backend/php/logout.a.php" method="post">
+			<input type="submit" name="submit" value="Logout"></input></br>
+		</form>
+		</br>
+		<a href="newPassword.html">Change Password</a></br>
     </div>
 </body>
 
