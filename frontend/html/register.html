@@ -17,7 +17,71 @@
     <!-- JS imports-->
 </head>
 
-<body>
+<body onload="errorParse()">
+
+    <script type="text/javascript">
+        function errorParse(){
+            var url = window.location.href;
+
+            var errorVar = url.split("?");
+            console.log(errorVar);
+
+            if (errorVar.length == 1){
+                return;
+            }
+
+            var error = errorVar[1].split("=");
+            console.log(error);
+
+            
+            var value = error[1];
+
+            var fields = document.getElementById("registerError");
+            var str = "";
+
+            // error=empty
+            if (value == "empty"){
+                str = "Please fill all fields.";
+            }
+            // error=email
+            if (value == "email"){
+                str = "Please enter a valid email address.";
+            }
+            // error=pwdr
+            if (value == "pwdr"){
+                str = "Passwords must match.";
+            }
+            // error=uid
+            if (value == "uidtaken"){
+                str = "Username or email already in use.";
+            }
+            // error=uidstmt
+            if (value == "uidstmt"){
+                str = "Error preparing username search sql statement.";
+            }
+            // error=createstmt
+            if (value == "createstmt"){
+                str = "Error preparing insert sql statement.";
+            }
+            // error=stmt
+            if (value == "stmt"){
+                str = "Error preparing username search sql statement.";
+            }
+            // error=none
+            if (value == "none"){
+                str = "";
+            }
+            // error=submit
+            if (value == "submit"){
+                str = "Error processing HTTP request.";
+            }
+
+            console.log(str);
+            fields.innerHTML = str;
+            fields.className = "row justify-content-center alert alert-danger";
+        }
+    </script>
+
 	<a href="index.php">Home</a><br/>
     <div class="register">
         <div class="registerDiv">
@@ -32,7 +96,7 @@
                 <input type="submit" name="submit" value="Register"></input></br>
             </form>
         </div>
-        <span class="registerError"></span>
+        <span id="registerError"></span>
     </div>
 </body>
 
