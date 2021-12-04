@@ -23,9 +23,60 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- JS imports-->
+    <script src="index.js" type="text/javascript"></script>
 </head>
 
-<body>
+<body onload="errorParse()" onhashchange="errorParse()">
+    <script type="text/javascript">
+        function errorParse(){
+            var url = window.location.href;
+
+            var errorVar = url.split("?");
+            console.log(errorVar);
+
+            if (errorVar.length == 1){
+                return;
+            }
+
+            var error = errorVar[1].split("=");
+            console.log(error);
+
+            var value = error[1];
+
+            var fields = document.getElementById("loginError");
+            var str = "";
+
+            // error=empty
+            if (value == "empty"){
+                str = "Please enter username and password.";
+            }
+            // error=uid
+            if (value == "uid"){
+                str = "Invalid Username.";
+            }
+            // error=uidstmt
+            if (value == "uidstmt"){
+                str = "Error preparing sql statement.";
+            }
+            // error=wronglogin
+            if (value == "wronglogin"){
+                str = "Invalid username or password.";
+            }
+            // error=none
+            if (value == "none"){
+                str = "";
+            }
+            // error=submit
+            if (value == "submit"){
+                str = "Error processing HTTP request.";
+            }
+
+            console.log(str);
+            fields.innerHTML = str;
+            fields.className = "row justify-content-center alert alert-danger";
+        }
+    </script>
+
     <div class="login text-center contaner" >
         <div class="row m-2"><h1>Please login below</h1></div>
         <div class="loginDiv row m-2 justify-content-center">
@@ -39,7 +90,7 @@
             <a class="createAccountLink" href="register.html">Create New Account</a><br/>
             <a class="forgotPasswordLink" href="forgotPassword.html">Forgot Password?</a>
         </div>
-        <span class="loginError row m-2 justify-content-center"></span>
+        <span id="loginError" class="row m-2 justify-content-center"></span>
     </div>
 </body>
 

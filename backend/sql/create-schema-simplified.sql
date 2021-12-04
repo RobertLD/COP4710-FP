@@ -65,6 +65,7 @@ create table request(
 	request_id INTEGER NOT NULL AUTO_INCREMENT,
     user_id INTEGER NOT NULL REFERENCES user(user_id),
     book_ISBN VARCHAR(256) NOT NULL REFERENCES book(ISBN),
+    semester VARCHAR(256) NOT NULL,
     primary key(request_id)
     
 );
