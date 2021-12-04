@@ -1,4 +1,4 @@
-use cop4710_fp;
+use COP4710_FP;
 INSERT INTO `user` (`username`,`password_hash`,`tmp_password`)
 VALUES
   ("Akeem","OYT28FST9LL",0),

@@ -1,4 +1,4 @@
-use cop4710_fp;
+use COP4710_FP;
 INSERT INTO `user` (`username`,`password_hash`,`tmp_password`, `email`, `first_name`, `last_name`, `admin_level`)
 VALUES
   ("Akeem","OYT28FST9LL",0, 'test@test.com', 'Rob', 'Bob', 0),
