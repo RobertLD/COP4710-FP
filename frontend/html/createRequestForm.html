@@ -24,23 +24,26 @@
 </head>
 
 <body>
-	<a href="index.php">Home</a><br/>
-    <div class="bookRequest">
-        <div class="bookRequestDiv">
-            <h1>Create a Book Request</h1>
-            <form onsubmit="" class="bookRequestForm">
-                Select Semester:<select>
-                    <option>Semesters</option>
-                </select>
-                </br>
-                <input type="" placeholder="Book Title"></input></br>
-                <input type="text" placeholder="Author Name"></input></br>
-                <input type="text" placeholder="Edition"></input></br>
-                <input type="text" placeholder="Publisher"></input></br>
-                <input type="text" placeholder="ISBN"></input></br>
+    <div class="bookRequest container text-center">
+        <h1 class="row justify-content-center">Create a Book Request</h1>
+        <div class="row justify-content-center mt-5">
+            <h4 class="col justify-content-center">Select Semester:</h4>
+            <select class="col form-select form-select-lg mb-4">
+                <option>Semesters</option>
+            </select>
+        </div>
+        <div class="row justify-content-center">
+            <form onsubmit="" class="bookRequestForm col">
+                <input class="form-control" type="text" placeholder="Book Title"></br>
+                <input class="form-control" type="text" placeholder="Author Name"></input></br>
+                <input class="form-control" type="text" placeholder="Edition"></input></br>
+                <input class="form-control" type="text" placeholder="Publisher"></input></br>
+                <input class="form-control" type="text" placeholder="ISBN"></input></br>
+                <input class="btn btn-primary m-2" type="submit" value="Submit Book Request"></input>
             </form>
         </div>
-        <span class="bookRequestError"></span>
+        <a class="row justify-content-center m-2" href="index.php">Home</a><br/>
+        <span class="bookRequestError row justify-content-center"></span>
     </div>
 </body>
 

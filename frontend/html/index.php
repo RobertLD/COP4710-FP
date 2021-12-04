@@ -28,7 +28,7 @@
 <body>
     <div class="login text-center contaner" >
         <div class="row m-2"><h1>Please login below</h1></div>
-        <div class="loginDiv row m-2 justify-content-md-center">
+        <div class="loginDiv row m-2 justify-content-center">
             <form class="loginForm col-md-auto" action="../../backend/php/login.a.php" method="post">
                 <input type="text" class="form-control" name="uid" placeholder="Username"></input></br>
                 <input type="text" class="form-control" name="pwd" placeholder="Password"></input></br>
@@ -39,7 +39,7 @@
             <a class="createAccountLink" href="register.html">Create New Account</a><br/>
             <a class="forgotPasswordLink" href="forgotPassword.html">Forgot Password?</a>
         </div>
-        <span class="loginError row m-2"></span>
+        <span class="loginError row m-2 justify-content-center"></span>
     </div>
 </body>
 

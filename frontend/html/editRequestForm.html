@@ -27,25 +27,27 @@
 </head>
 
 <body>
-	<a href="index.php">Home</a><br/>
-    <div class="bookRequest">
-        <div class="bookRequestDiv">
-            <h1>Create a Book Request</h1><br>
-                Select Semester:<select>
+	
+    <div class="bookRequest container text-center">
+            <h1>Update Current Book Request</h1><br>
+            <div class="row justify-content-center mt-5">
+                <h4 class="col justify-content-center">Select Semester:</h4>
+                <select class="col form-select form-select-lg mb-4">
                     <option>Semesters</option>
                 </select>
-                </br>
-                <p id="BookTitle">Book Title</p></br>
-                <p id="AuthorName">Authot Name</p></br>
-                <p id="Edition">Edition</p></br>
-                <p id="Publisher">Publisher</p></br>
-                <p id="ISBN">ISBN</p></br>
+            </div>
+            </br>
+            <p id="BookTitle">Book Title:</p></br>
+            <p id="AuthorName">Author Name:</p></br>
+            <p id="Edition">Edition:</p></br>
+            <p id="Publisher">Publisher:</p></br>
+            <p id="ISBN">ISBN:</p></br>
+        <div class="row">
+            <input class="col btn btn-primary m-2" type="button" value="Update Request">
+            <input class="col btn btn-primary m-2" type="button" value="Delete Request">
         </div>
-        <div>
-            <input type="button" value="Update Request">
-            <input type="button" value="Delete Request">
-        </div>
-        <span class="bookRequestError"></span>
+        <a class="row justify-content-center" href="index.php">Home</a>
+        <span class="bookRequestError row justify-content-center"></span>
     </div>
 </body>
 
