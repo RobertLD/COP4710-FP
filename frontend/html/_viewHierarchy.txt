@@ -7,10 +7,10 @@ View heirarchy works as follows:
 
 Examples:
 -----------------------------------
-* login can go to staffView.
-* staffView can go to login. 
+* index can go to staffView.
+* staffView can go to index. 
 * StaffView cannot go to professorView. 
-* editRequestForm can go directly to login but login cannot go directly to editRequestForm.
+* editRequestForm can go directly to index but index cannot go directly to editRequestForm.
 
 Visual:
 -----------------------------------
