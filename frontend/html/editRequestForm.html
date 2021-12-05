@@ -28,6 +28,35 @@
 
 <body>
 	<script type="text/javascript">
+        function replaceFormDiv() {
+            document.getElementById("formDiv").innerHTML += `
+                <form action="">
+                    <input class="form-control" id="BookTitle" placeholder="Book Title"></input></br>
+                    <input class="form-control" id="AuthorName" placeholder="Author Name:"></input></br>
+                    <input class="form-control" id="Edition" placeholder="Edition"></input></br>
+                    <input class="form-control" id="Publisher" placeholder="Publisher"></input></br>
+                    <input class="form-control" id="ISBN" placeholder="ISBN"></input>
+                </form>
+            `
+            document.getElementById("updateButton").innerHTML = `
+                <input class="col btn btn-primary m-2" type="button" value="Click to View Book Request" onclick="goToViewDiv()">
+            `
+        }
+        function goToViewDiv() {
+            document.getElementById("formDiv").innerHTML = `
+                <div class='border border-secondary rounded p-2 m-3'>
+                    <h1>View Of Selected Semester</h1>
+                    <p id="BookTitle">Book Title:</p></br>
+                    <p id="AuthorName">Author Name:</p></br>
+                    <p id="Edition">Edition:</p></br>
+                    <p id="Publisher">Publisher:</p></br>
+                    <p id="ISBN">ISBN:</p>
+                </div> 
+            `
+            document.getElementById("updateButton").innerHTML = `
+                <input class="col btn btn-primary m-2" type="button" value="Update Request" onclick="replaceFormDiv()">
+            `
+        }
         function confirmButtion(){
             var selection = confirm("Are you sure you'd like to delete this request?");
             if (selection == true){
@@ -39,24 +68,27 @@
         }
     </script>
     <div class="bookRequest container text-center">
-        <h1>Update Current Book Request</h1><br>
+        <h1>Click To Update Current Book Request</h1><br>
         <div class="row justify-content-center mt-5">
             <h4 class="col justify-content-center">Select Semester:</h4>
-            <select class="col form-select form-select-lg mb-4">
+            <select class="col form-select form-select-lg mb-2">
                 <option>Semesters</option>
             </select>
         </div>
         </br>
-        <div class="row justify-content-start">
-            <p id="BookTitle">Book Title:</p></br>
-            <p id="AuthorName">Author Name:</p></br>
-            <p id="Edition">Edition:</p></br>
-            <p id="Publisher">Publisher:</p></br>
-            <p id="ISBN">ISBN:</p> 
+        <div id="formDiv" class="row justify-content-start">
+            <div class='border border-secondary rounded p-2 m-3'>
+                <h1>View Of Selected Semester</h1>
+                <p id="BookTitle">Book Title:</p></br>
+                <p id="AuthorName">Author Name:</p></br>
+                <p id="Edition">Edition:</p></br>
+                <p id="Publisher">Publisher:</p></br>
+                <p id="ISBN">ISBN:</p>
+            </div> 
         </div>
         <div class="row">
-            <input class="col btn btn-primary m-2" type="button" value="Update Request">
-            <input class="col btn btn-primary m-2" type="button" value="Delete Request" onclick="confirmButtion()">
+            <p id="updateButton" class="col"><input class="btn btn-primary m-2" type="button" value="Update Request" onclick="replaceFormDiv()"></p>
+            <p class="col"><input class="btn btn-primary m-2" type="button" value="Delete Request" onclick="confirmButtion()"></p>
         </div>
         <a class="row justify-content-center" href="index.php">Home</a>
         <span id="bookRequestError" class="row justify-content-center"></span>
