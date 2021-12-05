@@ -57,6 +57,15 @@
                 <input class="col btn btn-primary m-2" type="button" value="Update Request" onclick="replaceFormDiv()">
             `
         }
+        function confirmButtion(){
+            var selection = confirm("Are you sure you'd like to delete this request?");
+            if (selection == true){
+                var field = document.getElementById("bookRequestError");
+
+                field.innerHTML = "Success.";
+                field.className = "row justify-content-center alert alert-success";
+            }
+        }
     </script>
     <div class="bookRequest container text-center">
         <h1>Click To Update Current Book Request</h1><br>
@@ -79,10 +88,10 @@
         </div>
         <div class="row">
             <p id="updateButton" class="col"><input class="btn btn-primary m-2" type="button" value="Update Request" onclick="replaceFormDiv()"></p>
-            <p class="col"><input class="btn btn-primary m-2" type="button" value="Delete Request"></p>
+            <p class="col"><input class="btn btn-primary m-2" type="button" value="Delete Request" onclick="confirmButtion()"></p>
         </div>
         <a class="row justify-content-center" href="index.php">Home</a>
-        <span class="bookRequestError row justify-content-center"></span>
+        <span id="bookRequestError" class="row justify-content-center"></span>
     </div>
 </body>
 

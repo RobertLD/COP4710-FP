@@ -72,8 +72,14 @@
             }
 
             console.log(str);
-            fields.innerHTML = str;
-            fields.className = "row justify-content-center alert alert-danger";
+            if (value != "none"){
+                fields.innerHTML = str;
+                fields.className = "row justify-content-center alert alert-danger";
+            }
+            else{
+                fields.innerHTML = "Success!";
+                fields.className = "row justify-content-center alert alert-success";
+            }
         }
     </script>
 
