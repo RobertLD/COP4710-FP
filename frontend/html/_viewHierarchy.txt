@@ -15,7 +15,7 @@ Examples:
 Visual:
 -----------------------------------
 
-login.html
+index.php
 |
 ----forgotPassword.html
 |
