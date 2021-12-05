@@ -57,7 +57,7 @@
                 <input class="col btn btn-primary m-2" type="button" value="Update Request" onclick="replaceFormDiv()">
             `
         }
-        function confirmButtion(){
+        function confirmButton(){
             var selection = confirm("Are you sure you'd like to delete this request?");
             if (selection == true){
                 var field = document.getElementById("bookRequestError");
@@ -88,7 +88,7 @@
         </div>
         <div class="row">
             <p id="updateButton" class="col"><input class="btn btn-primary m-2" type="button" value="Update Request" onclick="replaceFormDiv()"></p>
-            <p class="col"><input class="btn btn-primary m-2" type="button" value="Delete Request" onclick="confirmButtion()"></p>
+            <p class="col"><input class="btn btn-primary m-2" type="button" value="Delete Request" onclick="confirmButton()"></p>
         </div>
         <a class="row justify-content-center" href="index.php">Home</a>
         <span id="bookRequestError" class="row justify-content-center"></span>
