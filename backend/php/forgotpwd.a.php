@@ -97,8 +97,7 @@ if (isset($_POST["submit"])) {
 		header("location: ../../frontend/html/forgotPassword.html?error=sendmail");
 		exit();
     }
-	echo "The mail was sent to " . $email . " with the temp password " . $tempPwd . " and hash " . $tempHash;
-	#header("location: ../../frontend/html/forgotPassword.html?error=none");
+	header("location: ../../frontend/html/forgotPassword.html?error=none");
 	exit();
 }
 else {
