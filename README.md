@@ -1,67 +1,36 @@
 # COP4710-FP
 
-## Overview of tools
-We are going to need a few tools to develop our project to completion, namely the invidiual components of the LAMP stack
-1. Linux (Ubuntu via WSL)
-2. Apache2 (Server)
-3. MYSQL (SQL Server)
-4. PHP (Middleware)
+## Install XAMPP
+1. Install it from https://www.apachefriends.org/index.html, leave everything at default (especially the install path!)
+2. Open XAMPP Control Panel and start Apache and MySQL
+3. MAKE SURE you can navigate to C:/xampp/htdocs on your computer
+4. MAKE SURE that you can navigate to http://localhost and http://localhost/phpMyAdmin in your browser
 
-These tools will interface with one another to give the illusion of a seamless application. Generally this works as such:
-Linux - Largely irrelevant in the physical aspect of the project, allows apache to make SystemCalls and more.
-Apache2 - Allows access to files over different internet protocols
-MYSQL - Provides database access and the query language to access them
-PHP - Interface with API, MYSQL, and front-end information
+## Clone the repo
+1. Navigate to C:/xampp/htdocs and clear it out (either delete its contents or put them into another folder)
+2. Clone https://github.com/RobertLD/COP4710-FP.git into C:/xampp/htdocs
+3. Copy C:/xampp/htdocs/COP4710-FP/index.html into C:/xampp/htdocs (copying the index file one folder up)
+You should now be able to see the login screen from http://localhost
 
+## Init the database 
+(you must do this when setting up AND whenever create-schema.sql is modified)
+1. Navigate to C:/xampp/htdocs/COP4710-FP/backend/sql/create-schema.sql
+2. Open the file and copy all of its contents (Ctrl+A Ctrl+C)
+3. Navigate to http://localhost/phpMyAdmin and select the "SQL" tab along the top toolbar. You should see a big box for typing SQL
+4. Paste into the box and click the "Go" button in the bottom-right corner
+If you refresh the page, you should see that the database has been connected
 
-## Setting up your development enviroment
-
-You can follow this tutorial, note that some steps are outdated and a bit of due diligence may be required: [link](https://www.shayanderson.com/microsoft-windows/install-lamp-on-windows-10-with-wsl.htm).
-
-### Installing WSL
- Install WSL on your windows machine
-This step should be fairly simple, if you run into errors more than likely you have virtualization turned off in your bios. To fix this: [link](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting)
-
-### Installing MYSQL
- Install mysql on your ubuntu WSL
-This tutorial worked for me, it's not incredibly complicated: [link](https://pen-y-fan.github.io/2021/08/08/How-to-install-MySQL-on-WSL-2-Ubuntu/)
-If you run into issues, the most likely thing to have happened is that MYSQL created a new MYSQL user and it's directories can only be accessed by this user.
-You can either follow the part in the tutorial about setting root access or use:
-```
-su mysql
-```
-to change users.
+## Setup the sendmail system
+OPTIONAL: Without this the website will still work but it won't send any emails.
+So the Forgot Password and Create Staff Account features also won't fully work because they require you to use a temp password form your email.
+###TBA
 
 
-### Installing Apache
-Install apache2 with the following command
+## Using the website
+By default, there is a superadmin account with the username 'superadmin' and the password 'root'.
+The superadmin password can be changed, but the account cannot be deleted.
+From within superadmin (or a staff) you can create more staff (requires sendemail for the temp passwords).
+From the login screen you can create as many professor accounts as you want.
+Once logged in the navigation is pretty self-explanatory.
 
-```
-apt install apache2
-```
-After apache has installed, you can replace the configuration files with the config files we have here in the repo. These located in
-```
-/etc/apache2/apache2.conf
-```
-and
-```
-/etc/apache2/sites-available/000-default.conf
-```
-Apache is a service meaning you will use the service utility to start it, or restart it. You can do this as follows
-```
-sudo service apache2 start
-```
-Note: The config files require this repo to do cloned into:
-```
-/var/www
-```
-### Installing PHP
-You can install all of the PHP tools with one command, this command being:
-```
-sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
-```
-## Configuration Required
-1. MYSQL database must be configured with a root user, and you may (and probably should) add a personal user so not every use-case uses the Root user
-2. The MYSQL database can me configured by running the create_schema.sql script
-3. APACHE may require configuration to use PHP, but generally the PHP installation takes care of this for you.
-4. Linux may require some minor permission management and service management to get everything running as intended
+NOTE: When a professor is editing book requests, you must click the update button on that row as soon as you are done editing or your changes will not be saved. (A professor can only edit one row of a request at a time)
