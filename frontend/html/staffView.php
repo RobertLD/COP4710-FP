@@ -45,7 +45,7 @@
         </div>
 		<div class="row">
 			<div class="scheduleEmail col text-center border border-secondary rounded m-2">
-            <h4 class="justify-content-center text-center">Global Announcement</h4>
+            <h4 class="justify-content-center text-center m-2">Global Announcement</h4>
             <form onsubmit="">
                 <input class="form-control" type="text" placeholder="Due Date"><br>
                 <h6 class="text-center justify-content-center mb-2">An email notification will be immediately sent to all professors.<br/>
@@ -58,13 +58,13 @@
             <span class="scheduleEmailError"></span>
             </div>
 			<div class="makeOrDeleteAdmin col border border-secondary rounded m-2">
-				<h4 class="justify-content-center text-center">Add Staff Accounts</h4>
-				<form class="editStaffForm" action="../../backend/php/createStaff.a.php" method="post">
-					<input class="form-control mb-1" type="text" name="uid" placeholder="Username">
-					<input class="form-control mb-1" type="text" name="email" placeholder="Email">
-					<input class="form-control mb-1" type="text" name="fn" placeholder="First Name">
-					<input class="form-control mb-1" type="text" name="ln" placeholder="Last Name">
-					<input class="btn btn-primary m-2 col" type="submit" name="submit" value="Create Staff Account">
+				<h4 class="justify-content-center text-center m-2">Add Staff Accounts</h4>
+				<form class="editStaffForm justify-content-center me-3" action="../../backend/php/createStaff.a.php" method="post">
+					<input class="form-control m-2" type="text" name="uid" placeholder="Username">
+					<input class="form-control m-2" type="text" name="email" placeholder="Email">
+					<input class="form-control m-2" type="text" name="fn" placeholder="First Name">
+					<input class="form-control m-2" type="text" name="ln" placeholder="Last Name">
+					<input class="btn btn-primary m-2 col text-center" type="submit" name="submit" value="Create Staff Account">
 				</form>
 				<span class="makeOrDeleteAdminError"></span>
 			</div>
@@ -72,17 +72,17 @@
 		
         <div class="row">
             <div class="individualEmail col text-center border border-secondary rounded m-2">
-            <h4 class="justify-content-center text-center">Individual Notification</h4>
+            <h4 class="justify-content-center text-center m-2">Individual Notification</h4>
             <form class="col" onsubmit="">
                 <input class="form-control" type="text" placeholder="Email Individual"><br>
                 <input class="btn btn-primary m-2" type="submit" value="Send Individual Notification">
             </form>
 			</div>
 			<div class="makeOrDeleteAdmin col border border-secondary rounded m-2">
-            <h4 class="justify-content-center text-center">Delete User Account</h4>
+            <h4 class="justify-content-center text-center m-2">Delete User Account</h4>
 			<form class="editStaffForm" action="../../backend/php/deleteUser.a.php" method="post">
 				<input class="form-control mb-1" type="text" name="uid" placeholder="Username">
-				<input class="btn btn-primary m-2 col" type="submit" name="submit" value="DELETE USER">
+				<input class="btn btn-primary m-2 col" type="submit" name="submit" value="Delete User">
 			</form>
             <span class="makeOrDeleteAdminError"></span>
         </div>
