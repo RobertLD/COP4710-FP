@@ -81,6 +81,7 @@
             }
         }
     </script>
+	<?php include 'logoutHeader.php'?>
     <div class="container text-center">
         <h1 class="row justify-content-center mb-4">Update Password</h1>
         <div class="newPasswordDiv row">

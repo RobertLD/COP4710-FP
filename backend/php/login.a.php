@@ -17,21 +17,11 @@ if (isset($_POST["submit"])) {
 	}
 	
 	# Verify uid/pwd
-	$sql = "SELECT * FROM user WHERE username = ?;";
-	$stmt = mysqli_stmt_init($conn);
-	if (!mysqli_stmt_prepare($stmt, $sql)) {
-		header("location: ../../frontend/html/index.php?error=uidstmt");
-		exit();
-	}
-	mysqli_stmt_bind_param($stmt, "s", $uid);
-	mysqli_stmt_execute($stmt);
-	$res = mysqli_stmt_get_result($stmt);
-	$row = mysqli_fetch_assoc($res);
+	$row = sql_query("SELECT * FROM user WHERE username = ?;","s", $uid);
 	if (!$row) {
 		header("location: ../../frontend/html/index.php?error=wronglogin");
 		exit();
 	}
-	mysqli_stmt_close($stmt);
 	$hashedPwd = $row["password_hash"];	
 	$checkPwd = password_verify($pwd, $hashedPwd);
 	if($checkPwd !== true) {
@@ -45,6 +35,8 @@ if (isset($_POST["submit"])) {
 	$_SESSION["uid"] = $row["username"];
 	$_SESSION["lvl"] = $row["admin_level"];
 	$_SESSION["tmp"] = $row["tmp_password"];
+	$_SESSION["fn"] = $row["first_name"];
+	$_SESSION["ln"] = $row["last_name"];
 	header("location: ../../frontend/html/index.php?error=none");
 	exit();
 }

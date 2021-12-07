@@ -1,131 +1,22 @@
 use COP4710_FP;
-INSERT INTO `user` (`username`,`password_hash`,`tmp_password`, `email`, `first_name`, `last_name`, `admin_level`)
-VALUES
-  ("Akeem","OYT28FST9LL",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Julian","OJN85RTF8NS",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Kasper","TCQ41CXY4VZ",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Ainsley","HSS47ETB1OR",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("McKenzie","EJT45MOR3TM",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Timon","LBY25OEQ7GL",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Thaddeus","WJD88RGF8WV",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Minerva","TTI66WJP0CH",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Amos","CUX13RFF2NL",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Kyra","MPB50KLD3QY",0, 'test@test.com', 'Rob', 'Bob', 0);
-INSERT INTO `user` (`username`,`password_hash`,`tmp_password`, `email`, `first_name`, `last_name`, `admin_level`)
-VALUES
-  ("Scott","MNO87RQF5TS",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Blossom","NSU15QCG8RP",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Jordan","VYB12RLP5OX",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Alexander","RFV83QHQ8BJ",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Zia","PDO73JTE2YZ",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Lois","KMP28GXM8RC",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Alexander","YIH40SVS2PJ",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Quinn","PXF53OXT0CP",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Eagan","SPL26DTL6HV",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Alden","IGD53CFG8FJ",1, 'test@test.com', 'Rob', 'Bob', 0);
-INSERT INTO `user` (`username`,`password_hash`,`tmp_password`, `email`, `first_name`, `last_name`, `admin_level`)
-VALUES
-  ("Lewis","HMC87UJC5DB",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Anne","KDK87LLD2KO",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Preston","UDU13VMM7LP",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Halla","OLP26UKL8PY",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Ezekiel","UWY47SAX4AU",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Debra","XYD92CUM5DZ",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Ahmed","CKH91NPC1AW",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Grant","HXR17TLY7RD",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Olga","LHG65RWE5LR",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Nita","DOO27LVH9DO",1, 'test@test.com', 'Rob', 'Bob', 0);
-INSERT INTO `user` (`username`,`password_hash`,`tmp_password`, `email`, `first_name`, `last_name`, `admin_level`)
-VALUES
-  ("Nelle","WUV37MAM8CZ",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Macon","MWY22VLE4BR",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Jenna","TTE42GIQ7FD",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Richard","RUW33TMC6SP",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Jana","SZS52PRN5SJ",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("David","JGL22RZI4UV",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Amelia","OFF92VWK1JH",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Rahim","PMU73BTX8OB",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Myles","UQF78JPK8MV",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Ishmael","HVE77EKN7IY",0, 'test@test.com', 'Rob', 'Bob', 0);
-INSERT INTO `user` (`username`,`password_hash`,`tmp_password`, `email`, `first_name`, `last_name`, `admin_level`)
-VALUES
-  ("Basil","XAX67URO5OZ",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Oprah","PGM58WLR4DB",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Eric","JPR81FFB7PY",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Dara","KAC71KZI3JQ",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Thomas","LEF97UYT2JF",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Brooke","WQU80FZX1BM",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Joelle","DZB73MRC3OH",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("McKenzie","NPM26HTP6HX",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Tallulah","HRJ23MPB7JG",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Jillian","GDH36FIT6RJ",0, 'test@test.com', 'Rob', 'Bob', 0);
-INSERT INTO `user` (`username`,`password_hash`,`tmp_password`, `email`, `first_name`, `last_name`, `admin_level`)
-VALUES
-  ("Scott","LUH25PQV1UI",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Walter","HOG93OQR7XL",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Kimberly","NXG12NWE9HJ",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Erin","PSJ45YPC2FO",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Ferdinand","WRH42PZB1QK",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Marshall","TDO05MTO3TN",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Bruno","ZRK22TCX3OW",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Bernard","WIS46BLT4MR",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Lavinia","YYU18IIF5JP",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Edan","THO93MFN7BK",1, 'test@test.com', 'Rob', 'Bob', 0);
-INSERT INTO `user` (`username`,`password_hash`,`tmp_password`, `email`, `first_name`, `last_name`, `admin_level`)
-VALUES
-  ("Mason","NTW36GHB9JA",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Sophia","QHU55CUG6NM",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Rhona","ADJ97HZF1IL",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Bree","RUY34SDJ0TS",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Kareem","CES85QNW0OC",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Irene","TSC83RUH7NO",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Asher","KGF10XXS6IS",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Tarik","PFV72EBM8UP",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Nathan","HPE85RHL2VY",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Chase","XWP58UAW8IH",0, 'test@test.com', 'Rob', 'Bob', 0);
-INSERT INTO `user` (`username`,`password_hash`,`tmp_password`, `email`, `first_name`, `last_name`, `admin_level`)
-VALUES
-  ("Steel","IHY74LDW8YJ",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Wang","PRQ94GLT7MW",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Lucius","QCY82DTP6MO",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Zena","CPT13VQD4FD",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Dylan","VUL23HDJ0CG",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Randall","BCL28QMG3MH",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Paula","SHI84WKT5RC",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Erica","PIV74QQV2RD",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Andrew","VVB84KYL1EK",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Veda","MMB75QHR0QB",0, 'test@test.com', 'Rob', 'Bob', 0);
-INSERT INTO `user` (`username`,`password_hash`,`tmp_password`, `email`, `first_name`, `last_name`, `admin_level`)
-VALUES
-  ("Xanthus","HLN52XIN3QU",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Fritz","JFM25RGK0SM",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Athena","PDF41YMU3IE",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Xanthus","QTS29LIE8AJ",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Talon","UFC83SHU8KH",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Wesley","XUF78FXT3CD",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Keaton","KLD73BOZ1DP",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Angelica","TCK15NFY2BM",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Adria","YEX59HFL3DY",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Idona","VEF72DKT1IO",0, 'test@test.com', 'Rob', 'Bob', 0);
-INSERT INTO `user` (`username`,`password_hash`,`tmp_password`, `email`, `first_name`, `last_name`, `admin_level`)
-VALUES
-  ("Ray","RYG02LOR3GJ",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Jameson","JRL11XMR4JG",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Ethan","QCM68JYH1ZS",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Cairo","SZE66RQD5CE",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Barry","HYS32BIE3JM",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Bruno","QOW81RVR7GC",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Steven","MBX85MBG7LP",0, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Pandora","QIU48NMP4OE",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Eagan","ISM51GUK8NB",1, 'test@test.com', 'Rob', 'Bob', 0),
-  ("Whilemina","LIO27QFW4CW",0, 'test@test.com', 'Rob', 'Bob', 0);
-  
+
+# Create a superadmin account with username "superadmin" and password "root"
+
+INSERT INTO `user` (`username`,`password_hash`,`tmp_password`,`email`,`first_name`,`last_name`,`admin_level`)
+VALUES ("superadmin","$2y$10$3EiBtE.lF7EgpZzn.CPSNO95WNJCsZFBnVbfYTojwBvyRaNTvQEoG",0,"","Super","Admin",3);
+
+INSERT INTO `staff` (`user_id`,`username`,`superadmin`)
+VALUES (1,"superadmin",1);
+
+
+# Create a catalog of books to pick from
 
 INSERT INTO `book` (`title`,`author`,`edition`,`publisher`,`ISBN`)
 VALUES
-  ("urna justo","Kristen Rodgers","15.1","Magnis Ltd","777253797"),
-  ("amet ultricies","Leigh Garcia","15.0","Arcu Company","454286832"),
-  ("scelerisque scelerisque","Davis Holcomb","14.5","Odio Etiam Ligula Ltd","478196468"),
+  ("Calculus 3 Essentials","Kristen Rodgers","15.1","Magnis Ltd","777253797"),
+  ("Intro to Discrete Mathamatics","Leigh Garcia","15.0","Arcu Company","454286832"),
+  ("A Guide to the Musical Arts","Davis Holcomb","14.5","Odio Etiam Ligula Ltd","478196468"),
+  
   ("arcu. Vivamus","Laura Cervantes","15.2","Luctus Ut Corporation","850495339"),
   ("Pellentesque ut","Rama Kinney","15.1","Rutrum Urna LLC","281513161"),
   ("erat neque","Ocean James","14.8","Lorem Lorem Corp.","828516055"),

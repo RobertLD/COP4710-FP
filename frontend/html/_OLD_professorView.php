@@ -27,13 +27,13 @@
         </div>
         <h1 class="row justify-content-center mb-5">Please pick from your permissions below</h1>
         <div class="row justify-content-center">
-            <a class="row justify-content-center btn btn-primary m-2 text-center" href="createRequestForm.html">Create Book Request</a>
+            <a class="row justify-content-center btn btn-primary m-2 text-center" href="createRequestForm.php">Create Book Request</a>
         </div>
         <div class="row justify-content-center">
-            <a class="row justify-content-center btn btn-primary m-2 text-center" href="editRequestForm.html">View/Update/Delete Book Request</a>
+            <a class="row justify-content-center btn btn-primary m-2 text-center" href="editRequestForm.php">View/Update/Delete Book Request</a>
         </div>
         <div class="row justify-content-center">
-            <a class="row justify-content-center btn btn-primary m-2 text-center" href="newPassword.html">Change Password</a>
+            <a class="row justify-content-center btn btn-primary m-2 text-center" href="newPassword.php">Change Password</a>
         </div>
     </div>
 </body>

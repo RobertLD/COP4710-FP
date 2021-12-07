@@ -1,26 +1,6 @@
 <?php
 
 
-
-function random_str(
-    $length,
-    $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-) {
-    $str = '';
-    $max = mb_strlen($keyspace, '8bit') - 1;
-    if ($max < 1) {
-        throw new Exception('$keyspace must be at least two characters long');
-    }
-    for ($i = 0; $i < $length; ++$i) {
-        $str .= $keyspace[random_int(0, $max)];
-    }
-    return $str;
-}
-
-
-
-
-
 if (isset($_POST["submit"])) {
 	$email = $_POST["email"];
 	
@@ -28,11 +8,11 @@ if (isset($_POST["submit"])) {
 	
 	# Check input formatting
 	if (empty($email)) {
-		header("location: ../../frontend/html/forgotPassword.html?error=empty");
+		header("location: ../../frontend/html/forgotPassword.php?error=empty");
 		exit();
 	}
 	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		header("location: ../../frontend/html/forgotPassword.html?error=email");
+		header("location: ../../frontend/html/forgotPassword.php?error=email");
 		exit();
 	}
 	
@@ -42,7 +22,7 @@ if (isset($_POST["submit"])) {
 	$sql = "SELECT * FROM user WHERE email = ?;";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
-		header("location: ../../frontend/html/forgotPassword.html?error=emailstmt");
+		header("location: ../../frontend/html/forgotPassword.php?error=emailstmt");
 		exit();
 	}
 	mysqli_stmt_bind_param($stmt, "s", $email);
@@ -50,7 +30,7 @@ if (isset($_POST["submit"])) {
 	$res = mysqli_stmt_get_result($stmt);
 	$row = mysqli_fetch_assoc($res);
 	if (!$row) {
-		header("location: ../../frontend/html/forgotPassword.html?error=wrongemail");
+		header("location: ../../frontend/html/forgotPassword.php?error=wrongemail");
 		exit();
 	}
 	mysqli_stmt_close($stmt);
@@ -64,7 +44,7 @@ if (isset($_POST["submit"])) {
 	$sql = "UPDATE user SET password_hash = ? WHERE user.user_id = ?;";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
-		header("location: ../../frontend/html/forgotPassword.html?error=tempstmt1");
+		header("location: ../../frontend/html/forgotPassword.php?error=tempstmt1");
 		exit();
 	}
 	mysqli_stmt_bind_param($stmt, "si", $tempHash, $id);
@@ -73,7 +53,7 @@ if (isset($_POST["submit"])) {
 	$sql = "UPDATE user SET tmp_password = ? WHERE user.user_id = ?;";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
-		header("location: ../../frontend/html/forgotPassword.html?error=tempstmt2");
+		header("location: ../../frontend/html/forgotPassword.php?error=tempstmt2");
 		exit();
 	}
 	mysqli_stmt_bind_param($stmt, "ii", $isTemp, $id);
@@ -94,13 +74,13 @@ if (isset($_POST["submit"])) {
 	$retval = mail ($to,$subject,$message,$header);
 	
 	if( $retval !== true ) {
-		header("location: ../../frontend/html/forgotPassword.html?error=sendmail");
+		header("location: ../../frontend/html/forgotPassword.php?error=sendmail");
 		exit();
     }
-	header("location: ../../frontend/html/forgotPassword.html?error=none");
+	header("location: ../../frontend/html/forgotPassword.php?error=none");
 	exit();
 }
 else {
-	header("location: ../../frontend/html/forgotPassword.html?error=submit");
+	header("location: ../../frontend/html/forgotPassword.php?error=submit");
 	exit();
 }

@@ -93,8 +93,8 @@
             </form>
         </div>
         <div class="routeDiv row m-2">
-            <a class="createAccountLink" href="register.html">Create New Account</a><br/>
-            <a class="forgotPasswordLink" href="forgotPassword.html">Forgot Password?</a>
+            <a class="createAccountLink" href="register.php">Create New Account</a><br/>
+            <a class="forgotPasswordLink" href="forgotPassword.php">Forgot Password?</a>
         </div>
         <span id="loginError" class="row m-2 justify-content-center"></span>
     </div>

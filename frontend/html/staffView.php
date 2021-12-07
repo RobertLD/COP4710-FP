@@ -34,60 +34,63 @@
             }
         }
     </script>
+	<?php include 'logoutHeader.php'?>
     <div class="staffViewContainer container">
-        <div class="row">
-            <form class="logoutForm" action="../../backend/php/logout.a.php" method="post">
-			    <input class="btn btn-secondary m-2" type="submit" name="submit" value="Logout"></input>
-		    </form>  
-        </div>
         <h1 class="row justify-content-center text-center">Staff Hub</h1>
-        <div class="row">
-            <a class="btn btn-primary m-2" href="newPassword.html">Change Password</a>
-        </div>
         <div class="getAll row">
             <input class="btn btn-primary m-2" type="button" value="Get All Book Requests">
             <p id="viewResults">Fill me with innerHTML</p>
             <input class="btn btn-primary m-2" type="button" value="Submit Requests For Upcoming Semester"><br>
             <span class="getAllError"></span>
         </div>
-        <div class="makeOrDeleteAdmin row border border-secondary rounded p-2">
-            <h4 class="justify-content-center text-center">Add/Delete Staff Accounts</h4>
-            <input class="form-control mb-1" type="text" placeholder="Username"><br>
-            <input class="form-control mb-1" type="text" placeholder="Email"><br>
-            <input class="btn btn-primary m-2 col" type="button" value="Create Staff Account"><br>
-            <input class="btn btn-primary m-2 col" type="button" value="Delete Staff Account" onclick="confirmButton()"><br>
-            <span class="makeOrDeleteAdminError"></span>
-        </div>
-        <div class="row">
-            <div class="scheduleEmail col text-center border border-secondary rounded m-2">
+		<div class="row">
+			<div class="scheduleEmail col text-center border border-secondary rounded m-2">
             <h4 class="justify-content-center text-center">Global Announcement</h4>
             <form onsubmit="">
                 <input class="form-control" type="text" placeholder="Due Date"><br>
-                <h6 class="text-center justify-content-center mb-2">Please schedule when the Email is to be sent below. 
-                    If blank, it will be  immediately
+                <h6 class="text-center justify-content-center mb-2">An email notification will be immediately sent to all professors.<br/>
+				Additionally, you can set a date and time below for a reminder email to be sent.
                 </h6><br>
-                <input class="form-control" type="text" placeholder="Date"><br>
+                <input class="form-control" type="text" placeholder="Reminder Date"><br>
                 <input class="form-control" type="text" placeholder="Time"><br>
                 <input class="btn btn-primary m-2" type="submit" value="Send Global Announcement">
             </form>
             <span class="scheduleEmailError"></span>
             </div>
+			<div class="makeOrDeleteAdmin col border border-secondary rounded m-2">
+				<h4 class="justify-content-center text-center">Add Staff Accounts</h4>
+				<form class="editStaffForm" action="../../backend/php/createStaff.a.php" method="post">
+					<input class="form-control mb-1" type="text" name="uid" placeholder="Username">
+					<input class="form-control mb-1" type="text" name="email" placeholder="Email">
+					<input class="form-control mb-1" type="text" name="fn" placeholder="First Name">
+					<input class="form-control mb-1" type="text" name="ln" placeholder="Last Name">
+					<input class="btn btn-primary m-2 col" type="submit" name="submit" value="Create Staff Account">
+				</form>
+				<span class="makeOrDeleteAdminError"></span>
+			</div>
+		</div>
+		
+        <div class="row">
             <div class="individualEmail col text-center border border-secondary rounded m-2">
             <h4 class="justify-content-center text-center">Individual Notification</h4>
             <form class="col" onsubmit="">
-                <input class="form-control" type="text" placeholder="Due Date"><br>
                 <input class="form-control" type="text" placeholder="Email Individual"><br>
-                <h6 class="text-center justify-content-center mb-2">Please specify when this Email is to be sent below. 
-                    If blank, it will send immediately
-                </h6><br>
-                <input class="form-control" type="text" placeholder="Date"><br>
-                <input class="form-control" type="text" placeholder="Time"><br>
                 <input class="btn btn-primary m-2" type="submit" value="Send Individual Notification">
-            </form> 
+            </form>
+			</div>
+			<div class="makeOrDeleteAdmin col border border-secondary rounded m-2">
+            <h4 class="justify-content-center text-center">Delete User Account</h4>
+			<form class="editStaffForm" action="../../backend/php/deleteUser.a.php" method="post">
+				<input class="form-control mb-1" type="text" name="uid" placeholder="Username">
+				<input class="btn btn-primary m-2 col" type="submit" name="submit" value="DELETE USER">
+			</form>
+            <span class="makeOrDeleteAdminError"></span>
         </div>
         </div>
-        
         <span id="individualEmailError" class="row justify-content-center"></span>
+		<div class="row">
+            <a class="btn btn-primary m-2" href="newPassword.php">Change Password</a>
+        </div>
     </div>
 </body>
 </html>
