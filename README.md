@@ -20,17 +20,18 @@ You should now be able to see the login screen from http://localhost
 4. Paste into the box and click the "Go" button in the bottom-right corner
 If you refresh the page, you should see that the database has been connected
 
-## Setup the sendmail system
-OPTIONAL: Without this the website will still work but it won't send any emails.
+## Setup the sendmail system (optional)
+WARNING: Without this setup the website will still work but it won't send any emails. <br />
 So the Forgot Password and Create Staff Account features also won't fully work because they require you to use a temp password form your email.
-###TBA
+Instructions: (TBA)
 
 
 ## Using the website
-By default, there is a superadmin account with the username 'superadmin' and the password 'root'.
-The superadmin password can be changed, but the account cannot be deleted.
-From within superadmin (or a staff) you can create more staff (requires sendemail for the temp passwords).
-From the login screen you can create as many professor accounts as you want.
-Once logged in the navigation is pretty self-explanatory.
+- By default, there is a superadmin account with the username 'superadmin' and the password 'root'.
+- The superadmin password can be changed, but the account cannot be deleted.
+- From within superadmin (or a staff) you can create more staff (requires sendemail for the temp passwords).
+- From the login screen you can create as many professor accounts as you want.
+- Once logged in the navigation is pretty self-explanatory.
 
-NOTE: When a professor is editing book requests, you must click the update button on that row as soon as you are done editing or your changes will not be saved. (A professor can only edit one row of a request at a time)
+NOTE: When a professor is editing book requests, you must click the update button on that row as soon as you are done editing or your changes will not be saved. 
+(A professor can only edit one row of a request at a time)
