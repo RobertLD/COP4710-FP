@@ -87,7 +87,9 @@
 						if(isset($_SESSION["semester"])) {
 							$select = $_SESSION["semester"];
 						}
-						
+						else {
+							echo '<option selected disabled hidden>Select Semester</option>';
+						}
 						foreach ($semesters as $sem) {
 							$tag = "";
 							if($sem === $select) {
