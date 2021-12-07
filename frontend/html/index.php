@@ -88,7 +88,7 @@
         <div class="loginDiv row m-2 justify-content-center">
             <form class="loginForm col-md-auto" action="../../backend/php/login.a.php" method="post">
                 <input type="text" class="form-control" name="uid" placeholder="Username"></input></br>
-                <input type="text" class="form-control" name="pwd" placeholder="Password"></input></br>
+                <input type="password" class="form-control" name="pwd" placeholder="Password"></input></br>
                 <input type="submit" class="btn btn-primary m-2" name="submit" value="Login"></input></br>
             </form>
         </div>
