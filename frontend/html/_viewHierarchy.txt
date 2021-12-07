@@ -12,7 +12,7 @@ Examples:
 * StaffView cannot go to professorView. 
 * editRequestForm can go directly to index but index cannot go directly to editRequestForm.
 
-Visual:
+Prototype Visual:
 -----------------------------------
 
 index.php
