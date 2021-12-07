@@ -18,12 +18,22 @@ You should now be able to see the login screen from http://localhost
 2. Open the file and copy all of its contents (Ctrl+A Ctrl+C)
 3. Navigate to http://localhost/phpMyAdmin and select the "SQL" tab along the top toolbar. You should see a big box for typing SQL
 4. Paste into the box and click the "Go" button in the bottom-right corner
-If you refresh the page, you should see that the database has been connected
+If you refresh the page, you should see that the database has been created.
 
-## Setup the sendmail system (optional)
-WARNING: Without this setup the website will still work but it won't send any emails. <br />
+## Set up the sendmail system (optional)
+WARNING: Without this setup the website will still work but it won't send any emails. <br/>
 So the Forgot Password and Create Staff Account features also won't fully work because they require you to use a temp password form your email.
-Instructions: (TBA)
+1. Setup STMP on your computer normally (tutorial I used: https://youtu.be/IjA4CDGebYE )
+2. Settings: the server is "smtp.mail.yahoo.com", port is "587" (or "465"), username is "rn109@yahoo.com", and password is "hesthnjohenlwqvs"
+
+## Set up background reminder emails (optional)
+The website checks if it is time to send a deadline reminder email in two ways:
+1. Whenever a page is loaded. (navigating, clicking buttons, etc.)
+This always works, but there has to be someone using the website for automated emails to be sent.
+2. Background process
+Additionally, the host computer can set up a background process like cronjob to automatically trigger updateDeadline.php every day, hour, etc.<br/>
+File location: C:/xampp/htdocs/COP4710-FP/backend/php/updateDeadline.php<br/>
+This has to be set up on a computer-by-computer basis, so use whatever scheduler works best for you.
 
 
 ## Using the website
@@ -33,5 +43,5 @@ Instructions: (TBA)
 - From the login screen you can create as many professor accounts as you want.
 - Once logged in the navigation is pretty self-explanatory.
 
-NOTE: When a professor is editing book requests, you must click the update button on that row as soon as you are done editing or your changes will not be saved. 
+NOTE: When a professor is editing book requests, you must click the update button on that row as soon as you are done editing or your changes will not be saved.<br/>
 (A professor can only edit one row of a request at a time)

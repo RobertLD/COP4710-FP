@@ -38,7 +38,7 @@ if (isset($_POST["submit"])) {
 	# Send the new user an invitational email
 	$message = "You have been given a staff acount with the username '" . $row["username"] . "' and the temporary password '" . $tempPwd . "'\n";
 	$message .= "Please sign in here: http://localhost/COP4710-FP/frontend/html/";
-	$retval = send_email($email,"Bookstore Invitation",$message);
+	$retval = send_email($email,"Bookstore Staff Invitation",$message);
 		
 	if( $retval !== true ) {
 		header("location: ../../frontend/html/staffView.php?editStaff=sendmail");

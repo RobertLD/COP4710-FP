@@ -1,5 +1,8 @@
 <?php
 
+# Whenever the website is loaded, check for deadlines
+include "updateDeadline.php";
+
 session_start();
 
 if(isset($_SESSION["tmp"]) && $_SESSION["tmp"]===1) {

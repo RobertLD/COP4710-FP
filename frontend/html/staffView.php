@@ -57,15 +57,21 @@
 				<span class="makeOrDeleteAdminError"></span>
 			</div>
 			<div class="scheduleEmail col text-center border border-secondary rounded m-2">
-            <h4 class="justify-content-center text-center m-2">Global Announcement</h4>
-            <form onsubmit="">
-                <input class="form-control" type="text" placeholder="Due Date"><br>
-                <h6 class="text-center justify-content-center mb-2">An email notification will be immediately sent to all professors.<br/>
+            <h4 class="justify-content-center text-center m-2">Create Deadline</h4>
+            <form action="../../backend/php/addDeadline.a.php" method="post">
+				<h6 class="text-center justify-content-center mb-2">An email notification will be immediately sent to all professors.<br/>
 				Additionally, you can set a date and time below for a reminder email to be sent.
                 </h6><br>
-                <input class="form-control" type="text" placeholder="Reminder Date"><br>
-                <input class="form-control" type="text" placeholder="Time"><br>
-                <input class="btn btn-primary m-2" type="submit" value="Send Global Announcement">
+				<select name="semester" class="col form-select form-select-lg mb-2">
+					<option selected disabled hidden>Select Semester</option>
+					<option>Fall 2021</option>
+					<option>Spring 2022</option>
+					<option>Summer 2022</option>
+					<option>Fall 2022</option>
+				</select><br/>
+                <input class="form-control" type="text" name="deadline" placeholder="Deadline (YYYY-MM-DD)">
+                <input class="form-control" type="text" name="remindDate" placeholder="Reminder Date (YYYY-MM-DD, can be blank)">
+                <input class="btn btn-primary m-2" type="submit" name="submit" value="Create Deadline">
             </form>
             <span class="scheduleEmailError"></span>
             </div>

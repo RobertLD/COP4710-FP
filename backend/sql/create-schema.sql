@@ -22,6 +22,7 @@ create table user (
 	email VARCHAR(256) NOT NULL,
     first_name VARCHAR(80) NOT NULL,
 	last_name VARCHAR(80) NOT NULL,
+	# 1 = professor, 2 = staff, 3 = superadmin
 	admin_level INTEGER NOT NULL,
     primary key (user_id)
 );
@@ -55,6 +56,16 @@ create table request(
     user_id INTEGER NOT NULL REFERENCES professor(user_id),
 	semester VARCHAR(256) NOT NULL,
     primary key(request_id)
+);
+
+create table deadline(
+	deadline_id INTEGER NOT NULL AUTO_INCREMENT,
+	semester VARCHAR(256) NOT NULL,
+	due DATE NOT NULL,
+	reminder DATE NOT NULL,
+	# 0 = No reminder set, 1 = reminder pending, 2 = reminder was sent
+	send_email INTEGER NOT NULL,
+	primary key(deadline_id)
 );
 
 # By default there is a user "superadmin" with password "root"

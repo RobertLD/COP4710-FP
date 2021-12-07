@@ -1,4 +1,7 @@
-
+<?php
+# Whenever the website is loaded, check for deadlines
+include "../../backend/php/updateDeadline.php";
+?>
 <div class="container">
     <div class="d-flex justify-content-sm-start">
         <form class="p-2" action="../../backend/php/logout.a.php" method="post">
