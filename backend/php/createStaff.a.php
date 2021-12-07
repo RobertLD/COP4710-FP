@@ -44,27 +44,8 @@ if (isset($_POST["submit"])) {
 		header("location: ../../frontend/html/staffView.php?editStaff=sendmail");
 		exit();
 	}
-	echo "sent email to " . $email; 
-	exit();
 	header("location: ../../frontend/html/staffView.php?editStaff=success");
 	exit();
-	
-	
-	# Delete a user
-	if ($mode === 2) {
-		
-		# Find the user with the matching username
-		$row = sql_query("SELECT * FROM user WHERE username = ?", "s", $uid);
-		if (!$row) {
-			header("location: ../../frontend/html/staffView.php?editStaff=uidDNE");
-			exit();
-		}
-		$id = $row["user_id"];
-		
-		# Delete the
-		sql_query("DELETE FROM staff WHERE staff.user_id = ?", "i", $id);
-	}
-	
 }
 else {
 	header("location: ../../frontend/html/staffView.php?createStaff=submit");

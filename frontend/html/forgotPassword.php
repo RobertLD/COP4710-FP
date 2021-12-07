@@ -6,6 +6,10 @@
         - Text will change to sent to the email if an account exists.
         - Email will contain a link to the login page with the generated temp password
 -->
+<?php
+	# If the user is already logged in, this redirects them to the correct view
+	include_once '../../backend/php/redirect.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

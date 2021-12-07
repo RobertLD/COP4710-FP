@@ -38,12 +38,24 @@
     <div class="staffViewContainer container">
         <h1 class="row justify-content-center text-center">Staff Hub</h1>
         <div class="getAll row">
-            <input class="btn btn-primary m-2" type="button" value="Get All Book Requests">
-            <p id="viewResults">Fill me with innerHTML</p>
-            <input class="btn btn-primary m-2" type="button" value="Submit Requests For Upcoming Semester"><br>
+            <a class="btn btn-primary m-2" href="printAllBooks.php">Get All Book Requests</a><br>
             <span class="getAllError"></span>
         </div>
 		<div class="row">
+            <a class="btn btn-primary m-2" href="newPassword.php">Change Password</a>
+        </div>
+		<div class="row">
+			<div class="makeOrDeleteAdmin col border border-secondary rounded m-2">
+				<h4 class="justify-content-center text-center m-2">Add Staff Account</h4>
+				<form class="editStaffForm justify-content-center me-3" action="../../backend/php/createStaff.a.php" method="post">
+					<input class="form-control m-2" type="text" name="uid" placeholder="Username">
+					<input class="form-control m-2" type="text" name="email" placeholder="Email">
+					<input class="form-control m-2" type="text" name="fn" placeholder="First Name">
+					<input class="form-control m-2" type="text" name="ln" placeholder="Last Name">
+					<input class="btn btn-primary m-2 col text-center" type="submit" name="submit" value="Create Staff Account">
+				</form>
+				<span class="makeOrDeleteAdminError"></span>
+			</div>
 			<div class="scheduleEmail col text-center border border-secondary rounded m-2">
             <h4 class="justify-content-center text-center m-2">Global Announcement</h4>
             <form onsubmit="">
@@ -57,25 +69,14 @@
             </form>
             <span class="scheduleEmailError"></span>
             </div>
-			<div class="makeOrDeleteAdmin col border border-secondary rounded m-2">
-				<h4 class="justify-content-center text-center m-2">Add Staff Accounts</h4>
-				<form class="editStaffForm justify-content-center me-3" action="../../backend/php/createStaff.a.php" method="post">
-					<input class="form-control m-2" type="text" name="uid" placeholder="Username">
-					<input class="form-control m-2" type="text" name="email" placeholder="Email">
-					<input class="form-control m-2" type="text" name="fn" placeholder="First Name">
-					<input class="form-control m-2" type="text" name="ln" placeholder="Last Name">
-					<input class="btn btn-primary m-2 col text-center" type="submit" name="submit" value="Create Staff Account">
-				</form>
-				<span class="makeOrDeleteAdminError"></span>
-			</div>
 		</div>
 		
         <div class="row">
             <div class="individualEmail col text-center border border-secondary rounded m-2">
-            <h4 class="justify-content-center text-center m-2">Individual Notification</h4>
-            <form class="col" onsubmit="">
-                <input class="form-control" type="text" placeholder="Email Individual"><br>
-                <input class="btn btn-primary m-2" type="submit" value="Send Individual Notification">
+            <h4 class="justify-content-center text-center m-2">Invite Professor</h4>
+            <form class="col"  action="../../backend/php/individualEmail.a.php" method="post">
+                <input class="form-control" type="text" name="email" placeholder="Professor's Email"><br>
+                <input class="btn btn-primary m-2" type="submit" name="submit" value="Send Invite">
             </form>
 			</div>
 			<div class="makeOrDeleteAdmin col border border-secondary rounded m-2">
@@ -88,9 +89,6 @@
         </div>
         </div>
         <span id="individualEmailError" class="row justify-content-center"></span>
-		<div class="row">
-            <a class="btn btn-primary m-2" href="newPassword.php">Change Password</a>
-        </div>
     </div>
 </body>
 </html>

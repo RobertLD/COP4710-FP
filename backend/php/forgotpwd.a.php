@@ -63,15 +63,9 @@ if (isset($_POST["submit"])) {
 	
 	
 	# Send "forgot password" email
-	$to = $email;
-	$subject = "Bookstore Password Reset";
-	
-	$message = "The temp password for your account " . $row["username"] . " is " . $tempPwd . "\n";
+	$message = "The temp password for your account '" . $row["username"] . "' is '" . $tempPwd . "'\n";
 	$message .= "Log in using your temp password: http://localhost/COP4710-FP/frontend/html/";
-	
-	$header = "From:rn109@yahoo.com \r\n";
-	
-	$retval = mail ($to,$subject,$message,$header);
+	$retval = send_email($email,"Bookstore Password Reset",$message);
 	
 	if( $retval !== true ) {
 		header("location: ../../frontend/html/forgotPassword.php?error=sendmail");

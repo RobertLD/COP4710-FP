@@ -5,7 +5,10 @@
     - Submit form performs POST request for a new professor
     - Confirmation message with a link to reroute to login upon POST
 -->
-
+<?php
+	# If the user is already logged in, this redirects them to the correct view
+	include_once '../../backend/php/redirect.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 
